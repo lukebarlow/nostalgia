@@ -1,0 +1,27 @@
+{
+  "name": "nostalgia",
+  "description": "History and undo support for json data",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node server.js",
+    "production-server": "export NODE_ENV=production && node server.js",
+    "prod": "npm run production-server",
+    "transpile": "node scripts/copyJsFiles.js && coffee --compile --output lib/ src/",
+    "clean": "rm -r lib",
+    "postinstall": "npm run transpile",
+    "build": "export NODE_ENV=production && npm run transpile && browserify ./lib/main.js | uglifyjs -mt > nostalgia-min.js",
+    "test": "jasmine-node --coffee --verbose --captureExceptions ./src/"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "socket.io": "latest",
+    "browserify-middleware" : "latest",
+    "coffeeify" : "latest",
+    "caching-coffeeify" : "latest",
+    "d3" : "latest"
+  },
+  "devDependencies": {
+     "jasmine-node" : "latest",
+     "chalk" : "latest"
+  }
+}
