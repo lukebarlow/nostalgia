@@ -2,7 +2,7 @@ hash = (obj, i) ->
     return obj._id || obj.id || i
 
 jdp = require('jsondiffpatch').create({objectHash : hash})
-d3 = require('prong/d3-prong-min')
+d3 = require('d3')
 
 module.exports = (object) ->
 

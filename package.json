@@ -17,8 +17,11 @@
     "socket.io": "latest",
     "browserify-middleware" : "latest",
     "coffeeify" : "latest",
+    "coffee-script": "latest",
     "caching-coffeeify" : "latest",
-    "d3" : "latest"
+    "d3" : "latest",
+    "fs-extra": "^0.16.3",
+    "jsondiffpatch": "git://github.com/benjamine/jsondiffpatch.git"
   },
   "devDependencies": {
      "jasmine-node" : "latest",
